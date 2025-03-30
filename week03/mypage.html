@@ -22,96 +22,99 @@
     </header>
     <div class="container">
         <div class="left-side-bar">
-          <p>프론트엔드</p>
-          <img scr="./images/myphoto"/>
-          <h2>이승채</h2>
-          <p>@chookturi</p>
+          <img class="my-info-img" scr="./images/myphoto"/>
+          <h2 id="name">이승채</h2>
+          <p id="part">프론트엔드</p>
           <ul>
-            <li class="left-side-menu">| 내 강의실</li>
-            <li class="left-side-menu">| 내가 쓴 글</li>
-            <li class="left-side-menu">| 댓글 단 글</li>
-            <li class="left-side-menu">| 스크랩</li>
-            <li class="left-side-menu">| 회원정보 수정</li>
-            <li class="left-side-menu">| 일정 등록</li>
+            <li class="left-side-menu">내 강의실</li>
+            <li class="left-side-menu">내가 쓴 글</li>
+            <li class="left-side-menu">댓글 단 글</li>
+            <li class="left-side-menu">스크랩</li>
+            <li class="left-side-menu">회원정보 수정</li>
+            <li class="left-side-menu">일정 등록</li>
           </ul>
         </div>
-        <div class = "top-left-box">
-            <div>
-              <h2 class="box-title">기본 정보</h2>
-              <button type="submit">수정</button>
+        <div class="content-box">
+            <div class="top-area">
+                <div class = "top-left-box">
+                    <div class="box-header">
+                      <h2 class="box-title">기본 정보</h2>
+                      <button id="modify-btn" type="submit">수정</button>
+                    </div>
+                    <div class="info-row">
+                      <label class="info-name">이름</label>
+                      <input class="info" type = "text" value="이승채"/>
+                    </div>
+                    <div class="info-row">
+                      <label class="info-name">아이디</label>
+                      <input class="info" type = "text" value="chootkuri"/>
+                    </div>
+                    <div>
+                      <label class="info-name">이메일</label>
+                      <input class="info" type = "text" value="doyadoya@sookmyung.ac.kr"/>
+                    </div>
+                    <div>
+                      <label class="info-name">파트</label>
+                      <input class="info" type = "text" value="프론트엔드"/>
+                    </div>
+                    <div>
+                      <label class="info-name">비밀번호</label>
+                      <input class="info" type = "text" value="********"/>
+                    </div>
+                  </div>
+                  <div class = "top-right-box">
+                    <div class="study-top">
+                      <h2 class="box-title">일정 목록</h2>
+                      <button  class="view-all-btn" type="submit">전체보기</button>
+                    </div>
+                    <div class="schedule-list">
+                      <div class="schedule-item">
+                        <img class="schedule-img" src="./images/숙멋사로고 1.svg"/>
+                        <div class="schedule-info">
+                          <p class="schedule-name">멋쟁이사자처럼 중앙 OT</p>
+                          <p class="schedule-location">온라인 ZOOM</p>
+                        </div>
+                      </div>
+                        <div class="schedule-date">03/26</div>
+                      <div class="schedule-item">
+                        <img class="schedule-img" src="./images/숙멋사로고 1.svg"/>
+                        <div class="schedule-info">
+                          <p class="schedule-name">멋사 3주차 과제 제출</p>
+                          <p class="schedule-location">깃허브</p>
+                        </div>
+                      </div>
+                        <div class="schedule-date">03/30</div>
+                      <div class="schedule-item">
+                        <img class="schedule-img" src="./images/숙멋사로고 1.svg"/>
+                        <div class="schedule-info">
+                          <p class="schedule-name">멋사 4주차 세미나</p>
+                          <p class="schedule-location">프라임관 304호</p>
+                        </div>
+                      </div>
+                        <div class="schedule-date">04/01</div>
+                  </div>
+                  <div class="bottom-box">
+                    <div class="bottom-box-header">
+                       <h2 class="box-title">내 스터디</h2>
+                       <button class="view-all-btn" type="submit">전체보기</button>
+                    </div>
+                    <div class="my-study-list">
+                      <div class="my-study">
+                        <img class="study-img" src="./images/hiking.png"/>
+                        <img class="study-leader" src="./images/leader1.png"/>
+                        <p class="study-name">Hiking</p>
+                        <p class="study-mem-num">9 members</p>
+                      </div>
+                      <div class="my-study">
+                        <img class="study-img" src="./images/badminton.png"/>
+                        <img class="study-leader" src="./images/leader2.png"/>
+                        <p class="study-name">Badminton</p>
+                        <p class="study-mem-num">22 members</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div>
-              <label class="info-name">이름</label>
-              <input class="info" type = "text" value="이승채"/>
-            </div>
-            <div>
-              <label class="info-name">아이디</label>
-              <input class="info" type = "text" value="chootkuri"/>
-            </div>
-            <div>
-              <label class="info-name">이메일</label>
-              <input class="info" type = "text" value="doyadoya@sookmyung.ac.kr"/>
-            </div>
-            <div>
-              <label class="info-name">파트</label>
-              <input class="info" type = "text" value="프론트엔드"/>
-            </div>
-            <div>
-              <label class="info-name">비밀번호</label>
-              <input class="info" type = "text" value="********"/>
-            </div>
-          </div>
-          <div class = "top-right-box">
-            <div>
-              <h2 class="box-title">일정 목록</h2>
-              <button  class="view-all-btn" type="submit">전체보기</button>
-            </div>
-            <div class="schedule-list">
-              <div class="schedule-left">
-                <img src="./images/숙멋사로고 1.svg"/>
-                <p class="schedule-name">멋쟁이사자처럼 중앙 OT</p>
-                <p class="schedule-location">온라인 ZOOM</p>
-              </div>
-              <div class="schedule-right">
-                <p class="schedule-date">03/26</p>
-              </div>
-              <div class="schedule-left">
-                <img src="./images/숙멋사로고 1.svg"/>
-                <p class="schedule-name">멋사 3주차 과제 제출</p>
-                <p class="schedule-location">깃허브</p>
-              </div>
-              <div class="schedule-right">
-                <p class="schedule-date">03/30</p>
-              </div>
-              <div class="schedule-left">
-                <img src="./images/숙멋사로고 1.svg"/>
-                <p class="schedule-name">멋사 4주차 세미나</p>
-                <p class="schedule-location">프라임관 304호</p>
-              </div>
-              <div class="schedule-right">
-                <p class="schedule-date">04/01</p>
-              </div>
-          </div>
-          <div class="bottom-box">
-            <div>
-               <h2 class="box-title">내 스터디</h2>
-               <button class="view-all-btn" type="submit">전체보기</button>
-            </div>
-            <div class="my-study-list">
-              <div class="my-study">
-                <img class="study-img" src="./images/hiking.png"/>
-                <img class="study-leader" src="./images/leader1.png"/>
-                <p class="study-name">Hiking</p>
-                <p class="study-mem-num">9 members</p>
-              </div>
-              <div class="my-study">
-                <img class="study-img" src="./images/badminton.png"/>
-                <img class="study-leader" src="./images/leader2.png"/>
-                <p class="study-name">Badminton</p>
-                <p class="study-mem-num">22 members</p>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="right-side-menu-bar">
           <img src="./images/menu.svg"/>
