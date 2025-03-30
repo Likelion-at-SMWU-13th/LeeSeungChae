@@ -1,6 +1,7 @@
 body {
     background-color: black;
     padding-top: 50px;
+    font-family: "YiSunShin Dotum M", sans-serif;
 }
 
 header {
@@ -72,6 +73,12 @@ nav {
 
 #part {
     background-color: #839FDC;
+    color: white;
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 #name {
@@ -89,7 +96,6 @@ nav {
     flex-direction: column;
     list-style: none;
     align-items: center;
-
 }
 
 .left-side-menu {
@@ -201,10 +207,6 @@ nav {
 }
 
 
-.top-right-box {
-    width: 370px;
-}
-
 
 .schedule-list {
     display: flex;
@@ -279,11 +281,6 @@ nav {
     align-items: center;
 }
 
-.study-top {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
 
 .my-study-list {
     display: flex;
