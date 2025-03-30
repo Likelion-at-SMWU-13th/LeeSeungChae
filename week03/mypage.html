@@ -22,10 +22,10 @@
     </header>
     <div class="container">
         <div class="left-side-bar">
-          <img class="my-info-img" scr="./images/myphoto"/>
+          <img class="my-info-img" src="./images/myphoto.png"/>
           <h2 id="name">이승채</h2>
           <p id="part">프론트엔드</p>
-          <ul>
+          <ul class="left-side-menu-list">
             <li class="left-side-menu">내 강의실</li>
             <li class="left-side-menu">내가 쓴 글</li>
             <li class="left-side-menu">댓글 단 글</li>
@@ -37,7 +37,7 @@
         <div class="content-box">
             <div class="top-area">
               <div class="top-left-box">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="box-header">
                   <h2 class="box-title">기본 정보</h2>
                   <button id="modify-btn" type="submit">수정</button>
                 </div>
@@ -47,7 +47,7 @@
                     <input class="info" type="text" value="이승채" />
                   </div>
                   <div class="info-row">
-                    <label class="info-name">아이디</label>
+                    <label class="info-name">닉네임</label>
                     <input class="info" type="text" value="chootkuri" />
                   </div>
                   <div class="info-row">
@@ -64,7 +64,6 @@
                   </div>
                 </div>            
               </div>
-        
               <div class="top-right-box">
                 <div class="study-top" style="display: flex; justify-content: space-between; align-items: center;">
                   <h2 class="box-title">일정 목록</h2>
@@ -72,69 +71,76 @@
                 </div>
                 <div class="schedule-list">
                   <div class="schedule-item">
-                    <img class="schedule-img" src="./images/images.jpeg" />
+                    <button class="delete-btn">-</button>
+                    <img class="schedule-img" src="./images/숙멋사로고 1.svg" />
                     <div class="schedule-info">
                       <p class="schedule-name">멋쟁이사자처럼 중앙 OT</p>
                       <p class="schedule-location">온라인 ZOOM</p>
                     </div>
                     <div class="schedule-date">03.26</div>
+
                   </div>
                   <div class="schedule-item">
-                    <img class="schedule-img" src="./images/images.jpeg" />
+                    <button class="delete-btn">-</button>
+                    <img class="schedule-img" src="./images/숙멋사로고 1.svg" />
                     <div class="schedule-info">
                       <p class="schedule-name">멋사 3주차 과제 제출</p>
-                      <p class="schedule-location">온라인 ZOOM</p>
+                      <p class="schedule-location">깃허브</p>
                     </div>
-                    <div class="schedule-date">03.26</div>
+                    <div class="schedule-date">03.30</div>
                   </div>
                   <div class="schedule-item">
-                    <img class="schedule-img" src="./images/images.jpeg" />
+                    <button class="delete-btn">-</button>
+                    <img class="schedule-img" src="./images/숙멋사로고 1.svg" />
                     <div class="schedule-info">
-                      <p class="schedule-name">멋사 13기 4주차 세미나</p>
+                      <p class="schedule-name">멋사 4주차 세미나</p>
                       <p class="schedule-location">프라임관 304호</p>
                     </div>
-                    <div class="schedule-date">03.26</div>
+                    <div class="schedule-date">04.01</div>
                   </div>
                 </div>
               </div>
             </div>
-        
             <div class="bottom-box">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h2 class="box-title">내 스터디</h2>
-                <button class="view-all-btn">전체보기</button>
+                <button type="submit" class="view-all-btn" >전체보기</button>
               </div>
               <div class="my-study-list">
                 <div class="my-study">
-                  <img class="study-img" src="./images/images.jpeg" />
+                  <img class="study-img" src="./images/hiking.png" />
                   <div style="display: flex; align-items: center;">
-                    <img class="study-leader" src="./images/images.jpeg" />
+                    <img class="study-leader" src="./images/leader1.png" />
                     <div>
-                      <p class="study-name">UI/UX</p>
-                      <p class="study-mem-num">25 members</p>
+                      <p class="study-name">Hiking</p>
+                      <p class="study-mem-num">9 members</p>
                     </div>
                   </div>
                 </div>
                 <div class="my-study">
-                  <img class="study-img" src="./images/images.jpeg" />
+                  <img class="study-img" src="./images/badminton.png" />
                   <div style="display: flex; align-items: center;">
-                    <img class="study-leader" src="./images/images.jpeg" />
+                    <img class="study-leader" src="./images/leader2.png" />
                     <div>
                       <p class="study-name">Badminton</p>
-                      <p class="study-mem-num">25 members</p>
+                      <p class="study-mem-num">22 members</p>
                     </div>
                   </div>
+                </div>
+                <div class="add-study">
+                    <img class="more-study-img" src="./images/plus.svg" alt="add" />
                 </div>
               </div>
             </div>
           </div>
         <div class="right-side-menu-bar">
-          <img src="./images/menu.svg"/>
-          <img src="./images/home.svg"/>
-          <img src="./images/notification.svg"/>
-          <img src="./images/message.svg"/>
-          <img src="./images/settings.svg"/>
+          <img class="right-side-menu-img" src="./images/menu.svg">
+          <img class="right-side-menu-img" src="./images/home.svg"/>
+          <img class="right-side-menu-img" src="./images/notification.svg"/>
+          <img class="right-side-menu-img" src="./images/message.svg"/>
+          <img class="right-side-menu-img" src="./images/settings.svg"/>
         </div>
   </div>
 </body>
+<script src="mypage.js"></script>
 </html>
