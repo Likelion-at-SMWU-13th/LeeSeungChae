@@ -15,16 +15,24 @@ function randomSelectDrink(arr) {
 
 // 출력 문자열 반환 기능 - 함수로 구현
 function paymentResult(a,b) {
-
+    console.log("음료 결제 중입니다..💳");
     if (a.price <= b) { //선택된 음료 가격이 지갑 금액보다 작거나 같을 시
-        console.log(`${a.name} 음료가 나왔어요! (가격: ${a.price}원) 
-        지갑에 남은 돈: ${b - a.price}`);
+        console.log(`${a.name}가 나왔어요! (가격: ${a.price}원) 
+지갑에 남은 돈: ${b - a.price}원`);
 
     } else { // 선택된 음료 가격이 지갑 금액보다 더 비쌀 시
         console.log("돈이 부족해요! 음료를 살 수 없어요!");
     }
 
 };
+
+//자판기 음료 종류 출력 함수
+function printDrinks() {
+    console.log("<<구매 가능한 음료와 가격을 확인하세요!>> \n");
+    for (var i = 0; i < drinks.length; i++) {
+        console.log(`[${i+1}] ${drinks[i].name} (${drinks[i].price}원)`);
+    }
+}
 
 // 음료 자판기 프로그램 함수
 function buyDrink() {
@@ -34,8 +42,12 @@ function buyDrink() {
     do {
         let random_drink = randomSelectDrink(drinks);
         console.log(`🧃음료 자판기 프로그램🧃 \n`);
-        console.log(`선택한 음료: ${random_drink.name}`);
-        paymentResult(random_drink, my_money);
+        console.log("");
+        printDrinks();
+        console.log("\n")
+        console.log(`내가 선택한 음료: ${random_drink.name}`);
+        console.log("\n")
+        paymentResult(random_drink, my_money); 
         console.log("------------------------------------------");
         count++;
     } while(count < 3);
