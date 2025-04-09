@@ -7,19 +7,39 @@ const drinks = [
     {name: "제로콜라", price: 1800},
 ];
 
-let my_money; // 지갑 금액을 변수로 설정
-
 
 // 음료 랜덤 선택 기능 - 함수로 구현
-function randomSelectDrink() {
-
+function randomSelectDrink(arr) {
+    return arr[Math.floor(Math.random()*arr.length)];
 }
 
 // 출력 문자열 반환 기능 - 함수로 구현
-function paymentResult() {
+function paymentResult(a,b) {
 
-}
+    if (a.price <= b) { //선택된 음료 가격이 지갑 금액보다 작거나 같을 시
+        console.log(`${a.name} 음료가 나왔어요! (가격: ${a.price}원) 
+        지갑에 남은 돈: ${b - a.price}`);
 
+    } else { // 선택된 음료 가격이 지갑 금액보다 더 비쌀 시
+        console.log("돈이 부족해요! 음료를 살 수 없어요!");
+    }
+
+};
+
+// 음료 자판기 프로그램 함수
 function buyDrink() {
-    
+    let my_money = 5000; // 지갑 금액을 변수로 설정
+    let count = 0;
+
+    do {
+        let random_drink = randomSelectDrink(drinks);
+        console.log(`🧃음료 자판기 프로그램🧃 \n`);
+        console.log(`선택한 음료: ${random_drink.name}`);
+        paymentResult(random_drink, my_money);
+        console.log("------------------------------------------");
+        count++;
+    } while(count < 3);
+
 }
+
+buyDrink(); //모든 기능이 동작하도록 하는 buyDrink 함수 호출
