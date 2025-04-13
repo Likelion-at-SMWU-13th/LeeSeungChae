@@ -5,6 +5,7 @@ const drinks = [
     {name: "모구모구", price: 3000},
     {name: "토레타", price: 2500},
     {name: "제로콜라", price: 1800},
+    {name: "삼다수", price: 1000},
 ];
 
 
@@ -28,21 +29,21 @@ function paymentResult(a,b) {
 
 //자판기 음료 종류 출력 함수
 function printDrinks() {
-    console.log("<<구매 가능한 음료와 가격을 확인하세요!>> \n");
+    console.log("~ 구매 가능한 음료와 가격을 확인하세요! ~ \n");
     for (var i = 0; i < drinks.length; i++) {
         console.log(`[${i+1}] ${drinks[i].name} (${drinks[i].price}원)`);
     }
 }
 
+
 // 음료 자판기 프로그램 함수
 function buyDrink() {
-    let my_money = 5000; // 지갑 금액을 변수로 설정
+    let my_money = 2400; // 지갑 금액을 변수로 설정
     let count = 0;
 
     do {
         let random_drink = randomSelectDrink(drinks);
         console.log(`🧃음료 자판기 프로그램🧃 \n`);
-        console.log("");
         printDrinks();
         console.log("\n")
         console.log(`내가 선택한 음료: ${random_drink.name}`);
