@@ -9,6 +9,15 @@ body {
     font-family: "Pretendard-Regular", sans-serif;
 }
 
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+
 .post-box {
     display: flex;
     flex-direction: column;
