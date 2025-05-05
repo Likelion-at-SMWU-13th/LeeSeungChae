@@ -37,31 +37,33 @@ header {
     border-radius: 45px;
     margin-top: 3px;
     background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    cursor: pointer;
 }
 
 .location_info {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
+    margin-top: 5px;
 
 }
 
 #id {
     color: #000;
-    font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 750;
     line-height: normal;
+    cursor: pointer;
 }
 
 #location {
     color: #000;
-    font-family: Inter;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 }
 
 #more_info_icon {
@@ -71,6 +73,7 @@ header {
     aspect-ratio: 1/1;
     margin-left: 230px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 #post_img {
@@ -79,18 +82,17 @@ header {
     margin-top: 5px;
     flex-shrink: 0;
     background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    cursor: pointer;
 }
 
 .reaction-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .like {
     padding: 8px;
-
 }
 
 #like_icon, #comment_icon {
@@ -99,10 +101,12 @@ header {
     flex-shrink: 0;
     aspect-ratio: 1/1;
     margin-left: 3px;
+    cursor: pointer;
 }
 
 #share_icon {
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .like, .comment, .share {
@@ -122,6 +126,7 @@ header {
     height: 38px;
     flex-shrink: 0;
     margin-left: 255px;
+    cursor: pointer;
 }
 
 .like_info {
@@ -135,15 +140,16 @@ header {
 
 #like_people {
     font-size: 14px;
-
+    cursor: pointer;
 }
 
 #follower_profile {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     flex-shrink: 0;
     aspect-ratio: 1/1;
     border-radius: 20px;
+    cursor: pointer;
 
 }
 
@@ -157,27 +163,27 @@ header {
 
 #content {
     font-size: 14px;
-    margin-bottom: 2px;
 }
 
 #see_more_btn {
-    color: rgba(0, 0, 0, 0.60);
-    font-family: Inter;
-    font-size: 13px;
+    color: rgba(101, 100, 100, 0.6);
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     border:none;
     background-color: #FFF;
+    cursor: pointer;
 }
 
 #date {
     color: rgba(0, 0, 0, 0.60);
-    font-family: Inter;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
 
 
