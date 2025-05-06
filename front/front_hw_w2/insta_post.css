@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard-Regular", sans-serif;
+}
+
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+
+.post-box {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 458px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 0.3px solid rgba(157, 155, 155, 0.6);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+header {
+    display:flex;
+    align-items: center;
+    padding: 8px;
+}
+
+
+#my_profile {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 45px;
+    margin-top: 3px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    cursor: pointer;
+}
+
+.location_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+
+#id {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 750;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#location {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#more_info_icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    margin-left: 230px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#post_img {
+    width: 458px;
+    height: 469px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    cursor: pointer;
+}
+
+.reaction-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like {
+    padding: 8px;
+}
+
+#like_icon, #comment_icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+#share_icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.like, .comment, .share {
+    display: flex;
+    flex-direction: row;
+}
+
+#like_num, #comment_num, #share_num {
+    margin-top: 5px;
+    margin-left: 3px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#save_icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    margin-left: 255px;
+    cursor: pointer;
+}
+
+.like_info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 16px;
+    margin-bottom: 5px;
+
+}
+
+#like_people {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#follower_profile {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 17px;
+    margin-bottom: 15px;
+}
+
+#content {
+    font-size: 14px;
+}
+
+#see_more_btn {
+    color: rgba(101, 100, 100, 0.6);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border:none;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+#date {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+
+
+
