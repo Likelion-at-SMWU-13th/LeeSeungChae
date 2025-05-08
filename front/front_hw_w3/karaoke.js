@@ -11,18 +11,18 @@ function currentDate() {
     `;
 }
 
-function currentTime() {
+const timer = setInterval(() => {
     const currentTime = new Date();
     const hours = currentTime.getHours();
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
     const timerBox = document.getElementById("timer-box");
-    const timer = `${String(hours).padStart(2,"0")}시 ${String(minutes).padStart(2,"0")}분 ${String(seconds).padStart(2,"0")}초`;
+    const time = `${String(hours).padStart(2,"0")}시 ${String(minutes).padStart(2,"0")}분 ${String(seconds).padStart(2,"0")}초`;
     timerBox.innerHTML = `
     <h3>현재 시간</h3>
-    <p>${timer}</p>
+    <p>${time}</p>
     `;
-}
+},1000);
 
 async function fetchSongs() {
     try {
