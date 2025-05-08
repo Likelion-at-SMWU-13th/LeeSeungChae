@@ -1,9 +1,31 @@
+function currentDate() {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth()+1;
+    const day = currentDate.getDate();
+    const dateBox = document.getElementById("date-box");
+    const date = `${String(year).padStart(2,"0")}년 ${String(month).padStart(2,"0")}월 ${String(day).padStart(2,"0")}일`;
+    dateBox.innerHTML = `
+    <h3>날짜</h3>
+    <p>${date}</p>
+    `;
+}
 
-
+function currentTime() {
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
+    const timerBox = document.getElementById("timer-box");
+    const timer = `${String(hours).padStart(2,"0")}시 ${String(minutes).padStart(2,"0")}분 ${String(seconds).padStart(2,"0")}초`;
+    timerBox.innerHTML = `
+    <h3>현재 시간</h3>
+    <p>${timer}</p>
+    `;
+}
 
 async function fetchSongs() {
     try {
-        const keyword = ;
         const response = await fetch(`https://api.manana.kr/karaoke/singer/${keyword}.json`);
         const songs = await response.json();
         const songList = songs.filter((song) => song.singer === keyword);
@@ -26,4 +48,5 @@ async function fetchSongs() {
     }
 }
 
-fetchSongs();
+currentDate();
+currentTime();
