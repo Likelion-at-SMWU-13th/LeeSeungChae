@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard-Regular", sans-serif;
+    background-color: rgb(177, 208, 203);
+}
+
+header {
+    font-family: 'yg-jalnan';
+    color: rgb(59, 131, 119);
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    opacity: 70%;
+}
+
+#current-date {
+    color: white;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#date-box, #timer-box {
+    background-color: rgb(164, 194, 189);
+    margin-right: 20px;
+    border: 1px solid rgb(177, 208, 203);
+    border-radius: 20px;
+    font-size: 13px;
+    padding: 10px;
+    width: 110px;
+    text-align: center;
+    opacity: 70%;
+}
+
+#date-box {
+    margin-left : 18px;
+}
+
+
+#search-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 80%;
+}
+
+#search-bar {
+    font-size: 11px;
+    width: 30%;
+    height: 35px;
+    padding-left: 10px;
+    margin-left: 33%;
+    border-radius: 5px;
+    border: solid 1px rgb(198, 198, 198);  
+    line-height: 1.5;  
+}
+
+#search-bar::placeholder {
+    color: rgb(174, 168, 168);
+    font-family: 'GmarketSansMedium';
+}
+
+#search-btn {
+    font-size: 12px;
+    font-weight:600;
+    width: 45px;
+    height: 38px;
+    color: white;
+    border: solid 2px rgb(59, 131, 119);
+    border-radius: 5px;
+    background-color: rgb(59, 131, 119);
+    cursor: pointer;
+    opacity: 80%;
+    line-height: 1.5;
+}
+
+#search-btn:hover {
+    opacity: 30%;
+
+}
+
+#song-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.songBox {
+    width: 80%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.song-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.songBox:hover {
+    opacity: 90%;
+    transform: scale(1.05);
+}
+
+.title {
+    color: rgb(59, 131, 119);
+    font-family: 'GmarketSansMedium';
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.num {
+    width: 55px;
+    height: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(59, 131, 119);
+    background-color: rgb(218, 239, 235);
+    border: 2px solid rgb(218, 239, 235);
+    border-radius: 15px;
+}
+
+.singer {
+    color: rgb(59, 131, 119);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.composer, .release {
+    color: rgb(170, 202, 196);
+    font-size: 12px;
+}
