@@ -97,14 +97,12 @@ header {
 
 #search-btn:hover {
     opacity: 30%;
-
 }
 
 #song-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .songBox {
@@ -134,14 +132,14 @@ header {
     transform: scale(1.05);
 }
 
-.title {
+#title {
     color: rgb(59, 131, 119);
     font-family: 'GmarketSansMedium';
     font-size: 25px;
     font-weight: 700;
 }
 
-.num {
+#num {
     width: 55px;
     height: 18px;
     text-align: center;
@@ -152,13 +150,13 @@ header {
     border-radius: 15px;
 }
 
-.singer {
+#singer {
     color: rgb(59, 131, 119);
     font-size: 17px;
     font-weight: 500;
 }
 
-.composer, .release {
+#composer, #release {
     color: rgb(170, 202, 196);
     font-size: 12px;
 }
