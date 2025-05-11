@@ -39,7 +39,7 @@ async function fetchSongs(event) {
         if(songs.length === 0) { //검색어에 맞는 노래가 없을 시
             alert("검색 결과가 없습니다!"); //'검색 결과 없음' 메시지 출력
         } else {
-            songs.forEach((song) => { //모든 요소를 순회
+            songs.forEach((song) => { //받아온 노래 목록 순회
                 const songBox = document.createElement("div");
                 songBox.className = "songBox";
     
