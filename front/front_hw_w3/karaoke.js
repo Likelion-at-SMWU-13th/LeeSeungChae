@@ -30,6 +30,7 @@ async function fetchSongs(event) {
     event.preventDefault(); //폼 제출 방지
     const keyword = document.getElementById("search-bar").value.trim();
     const songContainer = document.getElementById("song-container");
+    songContainer.innerHTML = "";
     try {
         const response = await fetch(`https://api.manana.kr/karaoke/singer/${keyword}.json`);
         const songs = await response.json();
