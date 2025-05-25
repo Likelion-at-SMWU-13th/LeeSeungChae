@@ -7,6 +7,7 @@ const ClassCategory = styled.button`
   flex-shrink: 0;
   border-radius: 1.875rem;
   border: 1px solid #ececec;
+  font-weight: 500;
   background-color: white;
   margin-left: 1rem;
   cursor: pointer;

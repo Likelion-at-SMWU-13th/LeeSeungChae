@@ -9,6 +9,7 @@ const OnClickClassCategory = styled.button`
   color: white;
   border: 1px solid #ececec;
   background: #1e1e1e;
+  font-weight: 500;
   cursor: pointer;
 
   &:hover {

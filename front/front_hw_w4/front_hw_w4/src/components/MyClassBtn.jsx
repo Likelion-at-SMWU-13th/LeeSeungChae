@@ -1,5 +1,6 @@
 import React from "react";
-import profile from "../assets/profile.png";
+import myProfile from "../assets/myProfile.png";
+import basicProfile from "../assets/basicProfile.png";
 import styled from "styled-components";
 
 const MyClass = styled.button`
@@ -27,11 +28,20 @@ const UserBox = styled.div`
   margin-left: 25rem;
 `;
 
+const Name = styled.span`
+  color: #ff6000;
+  font-weight: 600;
+  font-size: 0.875rem;
+`;
+
 const MyClassBtn = () => {
+  const userName = "이승채";
   return (
     <UserBox>
-      <MyClass>내 강의실</MyClass>
-      <ProfileImg src={profile} />
+      <MyClass>
+        <Name>{userName}</Name>님의 강의실
+      </MyClass>
+      <ProfileImg src={userName === "이승채" ? myProfile : basicProfile} />
     </UserBox>
   );
 };

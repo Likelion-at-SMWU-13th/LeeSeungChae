@@ -22,7 +22,7 @@ const StarImg = styled.img`
 const AiText = styled.span`
   width: lrem;
   height: 1rem;
-  margin-top: 0.43rem;
+  margin-top: 0.25rem;
   color: #ff7a14;
   text-align: center;
   font-size: 0.9375rem;
@@ -35,6 +35,7 @@ const SearchBarText = styled.p`
   color: #ff7a14;
   font-size: 1.0625rem;
   font-style: normal;
+  margin-top: 0.85rem;
   font-weight: 600;
   line-height: normal;
   margin-right: 18rem;

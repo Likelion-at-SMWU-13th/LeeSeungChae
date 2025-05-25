@@ -8,6 +8,7 @@ const WelcomeText = styled.div`
   height: 13rem;
   display: flex;
   flex-direction: column;
+  border-top: 1px solid rgb(234, 231, 228);
 `;
 
 const WelcomeText1 = styled.span`
