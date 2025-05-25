@@ -8,12 +8,35 @@ import Class1 from "./Class1";
 import Class2 from "./Class2";
 import Class3 from "./Class3";
 import Class4 from "./Class4";
+import styled from "styled-components";
+
+const FooterText1 = styled.p`
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+`;
+
+const FooterText2 = styled.p`
+  color: #918989;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`;
 
 const PopularClass = () => {
   return (
     <>
-      <h1>실시간 인기있는 강의</h1>
-      <p>최근 많은 수강생들이 선택한 인기 강의를 확인해보세요.</p>
+      <FooterText1>실시간 인기있는 강의</FooterText1>
+      <FooterText2>
+        최근 많은 수강생들이 선택한 인기 강의를 확인해보세요.
+      </FooterText2>
       <ClassCategory1 />
       <ClassCategory2 />
       <ClassCategory3 />
