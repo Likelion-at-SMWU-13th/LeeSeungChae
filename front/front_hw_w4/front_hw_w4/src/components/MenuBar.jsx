@@ -7,10 +7,16 @@ import Menu5 from "./Menu5";
 import Menu6 from "./Menu6";
 import Menu7 from "./Menu7";
 import Menu8 from "./Menu8";
+import styled from "styled-components";
+
+const MenuBox = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const MenuBar = () => {
   return (
-    <>
+    <MenuBox>
       <Menu1 />
       <Menu2 />
       <Menu3 />
@@ -19,7 +25,7 @@ const MenuBar = () => {
       <Menu6 />
       <Menu7 />
       <Menu8 />
-    </>
+    </MenuBox>
   );
 };
 

@@ -8,24 +8,36 @@ const MenuImg = styled.img`
   flex-shrink: 0;
   aspect-ratio: 1/1;
   border-radius: 1.375rem;
+  cursor: pointer;
 `;
 
 const MenuName = styled.p`
   color: #000;
   text-align: center;
-  font-family: Pretendard;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  cursor: pointer;
+`;
+
+const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 80%;
+  }
 `;
 
 const Menu8 = () => {
   return (
-    <>
+    <Menu>
       <MenuImg src={menu8} />
       <MenuName>Orange Label</MenuName>
-    </>
+    </Menu>
   );
 };
 

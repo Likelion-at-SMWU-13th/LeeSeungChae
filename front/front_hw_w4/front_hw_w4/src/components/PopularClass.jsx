@@ -10,42 +10,65 @@ import Class3 from "./Class3";
 import Class4 from "./Class4";
 import styled from "styled-components";
 
-const FooterText1 = styled.p`
+const FooterText1 = styled.span`
   color: #000;
-  text-align: center;
-  font-family: Pretendard;
   font-size: 1.625rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  padding: 0.4rem;
 `;
 
-const FooterText2 = styled.p`
+const FooterText2 = styled.span`
   color: #918989;
-  text-align: center;
-  font-family: Pretendard;
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  padding: 0.4rem;
+`;
+
+const FooterText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 17.2rem;
+`;
+
+const ClassCategoryBox = styled.div`
+  display: flex;
+  padding: 1.5rem;
+  margin-left: 16rem;
+`;
+
+const ClassesBox = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 `;
 
 const PopularClass = () => {
   return (
     <>
-      <FooterText1>실시간 인기있는 강의</FooterText1>
-      <FooterText2>
-        최근 많은 수강생들이 선택한 인기 강의를 확인해보세요.
-      </FooterText2>
-      <ClassCategory1 />
-      <ClassCategory2 />
-      <ClassCategory3 />
-      <ClassCategory4 />
-      <ClassCategory5 />
-      <Class1 />
-      <Class2 />
-      <Class3 />
-      <Class4 />
+      <FooterText>
+        <FooterText1>실시간 인기있는 강의</FooterText1>
+        <FooterText2>
+          최근 많은 수강생들이 선택한 인기 강의를 확인해보세요.
+        </FooterText2>
+      </FooterText>
+      <ClassCategoryBox>
+        <ClassCategory1 />
+        <ClassCategory2 />
+        <ClassCategory3 />
+        <ClassCategory4 />
+        <ClassCategory5 />
+      </ClassCategoryBox>
+      <ClassesBox>
+        <Class1 />
+        <Class2 />
+        <Class3 />
+        <Class4 />
+      </ClassesBox>
     </>
   );
 };
