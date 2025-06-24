@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Info from "./components/info.jsx";
+import Movie from "./components/Movie";
 
 function App() {
   return (
     <>
-      <Info />
+      <Movie />
     </>
   );
 }
