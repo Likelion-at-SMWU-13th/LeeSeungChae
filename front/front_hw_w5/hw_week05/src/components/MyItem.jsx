@@ -47,7 +47,7 @@ const Container = styled.div`
   align-items: center;
   background-color: rgb(236, 233, 210);
   border-radius: 20px;
-  height: 100vh;
+  min-height: 100vh;
   border: solid 2px rgb(214, 204, 169);
 `;
 
@@ -56,6 +56,7 @@ const ItemBoxes = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 80px;
+  flex-wrap: wrap;
 `;
 
 const ItemBox = styled.div`
@@ -74,8 +75,8 @@ const ItemBox = styled.div`
 `;
 
 const ItemImg = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: solid 1.5px rgb(223, 227, 223);
 `;
 
@@ -100,27 +101,35 @@ const ItemRating = styled.p``;
 
 const MyItem = ({ my_name }) => {
   const [items, setItems] = useState([]);
+  const [showFavoriteItems, setShowFavoriteItems] = useState(false);
 
   useEffect(() => {
     axios
       .get("http://localhost:8000/items")
       .then((res) => {
-        const favoriteItems = res.data.filter((item) => item.rating >= 4.0);
-        setItems(favoriteItems);
+        setItems(res.data);
       })
       .catch((err) => {
         console.error("에러 발생", err);
       });
   }, []);
 
+  const favoriteItems = showFavoriteItems
+    ? items.filter((item) => item.rating >= 4.0)
+    : items;
+
   return (
     <Container>
       <Title>
-        <ViewAll>{my_name}템 전체보기⋰˚★</ViewAll>
-        <ViewFav>최애템 모아보기♥=͟͟͞͞ ³ ³</ViewFav>
+        <ViewAll onClick={() => setShowFavoriteItems(false)}>
+          {my_name}템 전체보기⋰˚★
+        </ViewAll>
+        <ViewFav onClick={() => setShowFavoriteItems(true)}>
+          최애템 모아보기♥=͟͟͞͞ ³ ³
+        </ViewFav>
       </Title>
       <ItemBoxes>
-        {items.map((item) => (
+        {favoriteItems.map((item) => (
           <ItemBox key={item.id}>
             <ItemImg src={item.product_img} alt={item.name} />
             <ItemName>{item.name}</ItemName>
