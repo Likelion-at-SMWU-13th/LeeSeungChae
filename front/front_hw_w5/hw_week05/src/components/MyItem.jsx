@@ -3,20 +3,20 @@ import axios from "axios";
 import styled from "styled-components";
 
 const Title = styled.div`
-  margin-top: 80px;
+  margin-top: 5rem;
 `;
 
 const ViewAll = styled.button`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: rgb(214, 204, 169);
   font-weight: bold;
   background-color: rgb(246, 246, 244);
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   text-align: center;
-  border: solid 2px rgb(214, 204, 169);
-  padding: 15px;
-  margin: 10px;
+  border: solid 0.125rem rgb(214, 204, 169);
+  padding: 0.938rem;
+  margin: 0.625rem;
   &:hover {
     opacity: 0.8;
     scale: 1.05;
@@ -24,16 +24,16 @@ const ViewAll = styled.button`
 `;
 
 const ViewFav = styled.button`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: rgb(214, 204, 169);
   font-weight: bold;
   background-color: rgb(246, 246, 244);
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   text-align: center;
-  border: solid 2px rgb(214, 204, 169);
-  padding: 15px;
-  margin: 10px;
+  border: solid 0.125rem rgb(214, 204, 169);
+  padding: 0.938rem;
+  margin: 0.625rem;
   &:hover {
     opacity: 0.8;
     scale: 1.05;
@@ -46,16 +46,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgb(236, 233, 210);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   min-height: 100vh;
-  border: solid 2px rgb(214, 204, 169);
+  border: solid 0.125rem rgb(214, 204, 169);
 `;
 
 const ItemBoxes = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 80px;
+  margin: 5rem;
   flex-wrap: wrap;
 `;
 
@@ -63,11 +63,11 @@ const ItemBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 40px;
+  border-radius: 0.938rem;
+  padding: 1.25rem;
+  margin: 2.5rem;
   background-color: rgb(231, 231, 216);
-  box-shadow: 0 2px 8px rgb(122, 120, 120);
+  box-shadow: 0 0.125rem 1rem rgb(122, 120, 120);
   &:hover {
     opacity: 0.8;
     scale: 1.05;
@@ -75,29 +75,31 @@ const ItemBox = styled.div`
 `;
 
 const ItemImg = styled.img`
-  width: 250px;
-  height: 250px;
-  border: solid 1.5px rgb(223, 227, 223);
+  width: 15.625rem;
+  height: 15.625rem;
+  border: solid 0.1rem rgb(214, 211, 207);
 `;
 
 const ItemName = styled.span`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 10px;
-  color: rgb(0, 0, 0);
+  margin-top: 0.625rem;
+  color: rgb(113, 101, 95);
 `;
 
 const ItemBrand = styled.span`
-  color: gray;
-  padding-top: 5px;
+  color: rgba(139, 134, 134, 0.82);
+  padding-top: 0.313rem;
 `;
 
 const ItemPrice = styled.p`
-  margin-top: 50px;
+  margin-top: 3.125rem;
   color: rgb(202, 161, 161);
   font-weight: bold;
 `;
-const ItemRating = styled.p``;
+const ItemRating = styled.p`
+  color: rgb(113, 101, 95);
+`;
 
 const MyItem = ({ my_name }) => {
   const [items, setItems] = useState([]);
