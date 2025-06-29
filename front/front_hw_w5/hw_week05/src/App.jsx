@@ -5,7 +5,7 @@ import MyItem from "./components/MyItem";
 function App() {
   return (
     <>
-      <MyItem />
+      <MyItem my_name={"승채"} />
     </>
   );
 }

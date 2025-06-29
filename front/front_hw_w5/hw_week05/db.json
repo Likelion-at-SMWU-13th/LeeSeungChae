@@ -22,7 +22,7 @@
       "id": 3,
       "name": "STRAWBERRY MOOD",
       "product_img": "https://products.chopsticks.market/98499c3c-562a-432e-adcf-e39fa2260532-%25E1%2584%2584%25E1%2585%25A1%25E1%2586%25AF%25E1%2584%2580%25E1%2585%25B5.jpg",
-      "brand": "Atypical House[에이티피컬 하우스]",
+      "brand": "Atypical House",
       "price": 19000,
       "rating": 5.0
     },
@@ -38,7 +38,7 @@
 
     {
       "id": 5,
-      "name": "폴로 치노 베이스볼 캡-누벅",
+      "name": "폴로 치노 베이스볼 캡",
       "product_img": "https://image2.lotteimall.com/goods/08/15/69/2043691508_1.jpg/dims/resizemc/550x550/optimize",
       "brand": "폴로 랄프 로렌",
       "price": 89000,
@@ -47,7 +47,7 @@
 
     {
       "id": 6,
-      "name": "망그러진 곰 귀여운 캐릭터 자유형 휴대용 마우스패드",
+      "name": "망그러진 곰 마우스패드",
       "product_img": "https://www.wishbucket.io/_next/image?url=https%3A%2F%2Fd2gfz7wkiigkmv.cloudfront.net%2Fpickin%2F2%2F1%2F2%2FfBpW_CdLRLW8krkt30IhbQ&w=640&q=75",
       "brand": "유랑상점",
       "price": 6000,
@@ -56,7 +56,7 @@
 
     {
       "id": 7,
-      "name": "헤트라스 퍼퓸 실키 촉감 핸드크림",
+      "name": "헤트라스 실키 핸드크림",
       "product_img": "https://img.hwahae.co.kr/commerce/goods/20231117_141206_KakaoTalk_20231117_105401192.jpg",
       "brand": "hetras[헤트라스]",
       "price": 16500,
