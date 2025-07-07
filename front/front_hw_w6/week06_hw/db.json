@@ -1,0 +1,75 @@
+{
+  "my_items": [
+    {
+      "id": 1,
+      "name": "과일에 담다 파우치",
+      "product_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNKrJ66JjkzMyQkMjvS8apln6ftEp6EUVtg&s",
+      "brand": "mettre[매터]",
+      "price": 10000,
+      "rating": 4.0
+    },
+
+    {
+      "id": 2,
+      "name": "MINT LAPTOP POUCH",
+      "product_img": "https://teteum.com/web/product/big/202506/ab68a1e7b6dd950b3cc1b762e8ef1c22.png",
+      "brand": "teteum[테틈]",
+      "price": 46000,
+      "rating": 4.0
+    },
+
+    {
+      "id": 3,
+      "name": "STRAWBERRY MOOD",
+      "product_img": "https://products.chopsticks.market/98499c3c-562a-432e-adcf-e39fa2260532-%25E1%2584%2584%25E1%2585%25A1%25E1%2586%25AF%25E1%2584%2580%25E1%2585%25B5.jpg",
+      "brand": "Atypical House",
+      "price": 19000,
+      "rating": 5.0
+    },
+
+    {
+      "id": 4,
+      "name": "아식스 조그 100 2 블랙",
+      "product_img": "https://www.elandrs.com/upload/fckeditor/tempgoodsdesc/2022091662294304658.jpg",
+      "brand": "ASICS[아식스]",
+      "price": 95000,
+      "rating": 3.0
+    },
+
+    {
+      "id": 5,
+      "name": "폴로 치노 베이스볼 캡",
+      "product_img": "https://image2.lotteimall.com/goods/08/15/69/2043691508_1.jpg/dims/resizemc/550x550/optimize",
+      "brand": "폴로 랄프 로렌",
+      "price": 89000,
+      "rating": 3.5
+    },
+
+    {
+      "id": 6,
+      "name": "망그러진 곰 마우스패드",
+      "product_img": "https://www.wishbucket.io/_next/image?url=https%3A%2F%2Fd2gfz7wkiigkmv.cloudfront.net%2Fpickin%2F2%2F1%2F2%2FfBpW_CdLRLW8krkt30IhbQ&w=640&q=75",
+      "brand": "유랑상점",
+      "price": 6000,
+      "rating": 5.0
+    },
+
+    {
+      "id": 7,
+      "name": "헤트라스 실키 핸드크림",
+      "product_img": "https://img.hwahae.co.kr/commerce/goods/20231117_141206_KakaoTalk_20231117_105401192.jpg",
+      "brand": "hetras[헤트라스]",
+      "price": 16500,
+      "rating": 3.5
+    },
+
+    {
+      "id": 8,
+      "name": "퍼퓸 밤 라레",
+      "product_img": "https://cdn.yamibuy.net/item/9871eb557752938e9e4541380c717e24_750x750.webp",
+      "brand": "TAMBURINS[탬버린즈]",
+      "price": 46500,
+      "rating": 3.0
+    }
+  ]
+}
