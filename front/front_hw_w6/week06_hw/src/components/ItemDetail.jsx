@@ -5,7 +5,7 @@ import axios from "axios";
 const ItemDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [item, setItem] = useState();
+  const [item, setItem] = useState(null);
 
   useEffect(() => {
     axios
@@ -18,13 +18,17 @@ const ItemDetail = () => {
       });
   }, [id]);
 
-  const GoBack = () => {
+  const goBack = () => {
     navigate(-1);
   };
 
+  if (!item) {
+    return <div>불러오는중..</div>;
+  }
+
   return (
     <div>
-      <button onclick={GoBack}>뒤로 가기</button>
+      <button onClick={goBack}>뒤로 가기</button>
       <div>
         <h3>{item.name}</h3>
         <img src={item.product_img} />
