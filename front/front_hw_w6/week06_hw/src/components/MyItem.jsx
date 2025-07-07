@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styled from "styled-components";
 
@@ -49,6 +50,7 @@ const Container = styled.div`
   border-radius: 1.25rem;
   min-height: 100vh;
   border: solid 0.125rem rgb(214, 204, 169);
+  overflow-x: hidden;
 `;
 
 const ItemBoxes = styled.div`
@@ -56,7 +58,10 @@ const ItemBoxes = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 5rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  min-width: 75rem;
+  padding: 0 4.5rem;
 `;
 
 const ItemBox = styled.div`
@@ -104,6 +109,7 @@ const ItemRating = styled.p`
 const MyItem = ({ my_name }) => {
   const [items, setItems] = useState([]);
   const [showFavoriteItems, setShowFavoriteItems] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -120,6 +126,10 @@ const MyItem = ({ my_name }) => {
     ? items.filter((item) => item.rating >= 4.0)
     : items;
 
+  const seeDetail = (id) => {
+    navigate(`/item/${id}`);
+  };
+
   return (
     <Container>
       <Title>
@@ -132,7 +142,7 @@ const MyItem = ({ my_name }) => {
       </Title>
       <ItemBoxes>
         {favoriteItems.map((item) => (
-          <ItemBox key={item.id}>
+          <ItemBox key={item.id} onClick={() => seeDetail(item.id)}>
             <ItemImg src={item.product_img} alt={item.name} />
             <ItemName>{item.name}</ItemName>
             <ItemBrand>{item.brand}</ItemBrand>
