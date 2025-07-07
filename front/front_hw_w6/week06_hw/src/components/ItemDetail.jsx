@@ -1,6 +1,26 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import styled from "styled-components";
+
+const DetailBox = styled.div``;
+
+const Container = styled.div``;
+
+const GoBackBtn = styled.button``;
+
+const ItemName = styled.h3``;
+
+const Behind = styled.p``;
+const AddCmtBtn = styled.button``;
+
+const AddComment = styled.div``;
+
+const AddCommentBox = styled.input``;
+
+const ViewAllCmt = styled.div``;
+
+const ViewAllCmtTitle = styled.h3``;
 
 const ItemDetail = () => {
   const { id } = useParams();
@@ -35,34 +55,29 @@ const ItemDetail = () => {
   if (!item) return <div>로딩 중...</div>;
 
   return (
-    <div>
-      <button onClick={goBack}>뒤로 가기</button>
-      <div>
-        <h3>{item.name}</h3>
-        <img src={item.product_img} />
-        <p>{item.brand}</p>
-        <p>{item.price}</p>
-        <p>{item.rating}</p>
-        <p>비하인드:{item.story}</p>
-      </div>
-      <div>
-        <input
+    <Container>
+      <GoBackBtn onClick={goBack}>뒤로 가기</GoBackBtn>
+      <DetailBox>
+        <ItemName>{item.name}</ItemName>
+        <Behind>비하인드:{item.story}</Behind>
+      </DetailBox>
+      <AddComment>
+        <AddCommentBox
           type="text"
           placeholder="승채템 사용 후기를 남겨주세요!"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-        ></input>
-        <button onClick={addComment}>등록</button>
-      </div>
-      <div>
-        <p>댓글 모아보기</p>
+        ></AddCommentBox>
+        <AddCmtBtn onClick={addComment}>등록</AddCmtBtn>
+      </AddComment>
+      <ViewAllCmt>
+        <ViewAllCmtTitle>댓글 모아보기</ViewAllCmtTitle>
         {comments.map((cmt, num) => {
           console.log(comments);
           return <div key={num}>{cmt}</div>;
         })}
-      </div>
-      <div></div>
-    </div>
+      </ViewAllCmt>
+    </Container>
   );
 };
 
