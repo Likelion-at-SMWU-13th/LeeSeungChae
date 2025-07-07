@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "SacheonUju-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/SacheonUju-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,6 +31,7 @@ a:hover {
 }
 
 body {
+  font-family: "SacheonUju-Regular";
   margin: 0;
   display: flex;
   place-items: center;
