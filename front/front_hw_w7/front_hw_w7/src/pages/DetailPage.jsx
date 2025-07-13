@@ -3,7 +3,7 @@ import Button from "../components/Button";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-const { baseURL } = import.meta.env.VITE_API_BASE_URL;
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const DetailPage = () => {
   const navigate = useNavigate();
@@ -25,6 +25,11 @@ const DetailPage = () => {
   useEffect(() => {
     getDetail(id);
   }, [id]);
+
+  useEffect(() => {
+    getDetail(id);
+  }, [id]);
+
   return (
     <Wrapper>
       <Button txt="게시글 작성하기" onBtnClick={() => navigate("/write")} />
