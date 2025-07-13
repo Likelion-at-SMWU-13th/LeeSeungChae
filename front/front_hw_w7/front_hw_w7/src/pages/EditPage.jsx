@@ -36,20 +36,20 @@ const EditPage = () => {
   }, [id]);
 
   const editComment = () => {
-    axios.put(`${baseURL}/entries/${id}/`),
-      {
+    axios
+      .put(`${baseURL}/entries/${id}/`, {
         author: author,
         comment: comment,
-      }
-        .then((response) => {
-          console.log(response);
-          alert("게시글 수정 완료!");
-          navigate(`/comment/${id}`);
-        })
-        .catch((error) => {
-          console.log(error);
-          alert("게시글 수정 실패!");
-        });
+      })
+      .then((response) => {
+        console.log(response);
+        alert("게시글 수정 완료!");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("게시글 수정 실패!");
+      });
   };
 
   return (

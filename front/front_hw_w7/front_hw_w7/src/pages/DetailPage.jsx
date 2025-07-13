@@ -52,7 +52,11 @@ const DetailPage = () => {
         <Time>{detail.timestamp}</Time>
         <Comment>{detail.comment}</Comment>
         <BtnWrapper>
-          <Button txt="수정" fontSize="1.875rem" />
+          <Button
+            txt="수정"
+            fontSize="1.875rem"
+            onBtnClick={() => navigate(`/edit/${id}`)}
+          />
           <Button txt="삭제" fontSize="1.875rem" onBtnClick={deleteComment} />
         </BtnWrapper>
       </DetailWrapper>
