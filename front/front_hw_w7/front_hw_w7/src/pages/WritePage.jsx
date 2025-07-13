@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../components/Button";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const WritePage = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const WritePage = () => {
 
   const postComment = () => {
     axios
-      .post("http://127.0.0.1:8000/entries/", {
+      .post(`${baseURL}/entries/`, {
         author: author,
         comment: comment,
       })
