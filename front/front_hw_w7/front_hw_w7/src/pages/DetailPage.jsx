@@ -10,6 +10,20 @@ const DetailPage = () => {
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
 
+  const deleteComment = () => {
+    axios
+      .delete(`${baseURL}/entries/${id}/`)
+      .then((response) => {
+        console.log(response);
+        alert("게시글 삭제가 완료!");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("게시글 삭제 실패!");
+      });
+  };
+
   const getDetail = (id) => {
     axios
       .get(`${baseURL}/entries/${id}/`)
@@ -39,7 +53,7 @@ const DetailPage = () => {
         <Comment>{detail.comment}</Comment>
         <BtnWrapper>
           <Button txt="수정" fontSize="1.875rem" />
-          <Button txt="삭제" fontSize="1.875rem" />
+          <Button txt="삭제" fontSize="1.875rem" onBtnClick={deleteComment} />
         </BtnWrapper>
       </DetailWrapper>
     </Wrapper>
