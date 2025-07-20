@@ -14,7 +14,7 @@ const Greeting = () => {
       method: "GET", // 우리가 데이터(사용자 이름, 사용자 프로필 이미지)를 받아와야 하는 것이기 때문에 GET 방식으로 요청
       headers: {
         Authorization: `Bearer ${accessToken}`, // 여기에 accessToken 값을 넣어서 어떤 사용자의 정보를 가져와야 하는지 카카오가 구별할 수 있도록 함
-        "Content-type": "application/x-www-form-urlencoded",
+        "Content-type": "application/x-www-form-urlencoded", // 요청하는 데이터의 타입을 지정 (한 줄로 인코딩된 폼 데이터 형식)
       },
     }).then((res) => {
       // 사용자의 정보를 요청해서 응답을 받으면, 실행되는 구문
