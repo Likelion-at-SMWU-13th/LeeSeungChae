@@ -20,7 +20,7 @@ const Redirection = () => {
         method: "POST", // 데이터 처리 방식: POST -> "데이터를 내가 보내겠다!" 라는 의미임. 우리는 인가 코드를 보내서 Access Token을 받고 싶은 것이기 때문에, POST 방식으로 요청
 
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/x-www-form-urlencoded", // 요청하는 데이터의 타입을 지정 (한 줄로 인코딩된 폼 데이터 형식)
         },
       }
     ).then((res) => {
