@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const Comment = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const Comment = () => {
 
   const getComment = () => {
     axios
-      .get("http://127.0.0.1:8000/entries/")
+      .get(`${baseURL}/entries/`)
       .then((response) => {
         console.log(response);
         setComments(response.data);
