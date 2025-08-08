@@ -13,6 +13,7 @@ flex-direction: row;
 `;
 
 const Card = Styled.div`
+background-color: white !important;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -20,14 +21,14 @@ border-radius: 10px;
 width: 500px;
 height: 600px;
 margin: 30px;
-box-shadow: 3px 6px 16px rgba(185, 86, 86, 0.15);
+box-shadow: 3px 6px 16px rgba(0, 0, 0, 0.15);
 `;
 
 const Title = Styled.h3`
-padding-left: 10px;
-font-size: 22px;
-
-
+padding: 10px;
+color: #4f4f4f;
+font-size: 24px;
+font-weight: bold;
 `;
 
 const Img = Styled.img`
@@ -37,11 +38,14 @@ height: 250px;
 
 const Desc = Styled.p`
 padding: 10px;
+font-family: "GowunBatang-Regular";
 font-size: 18px;
+color: #666666;
 `;
 
 const Date = Styled.span`
 padding: 10px;
+font-family: "GowunBatang-Regular";
 color: lightgrey;
 `;
 
