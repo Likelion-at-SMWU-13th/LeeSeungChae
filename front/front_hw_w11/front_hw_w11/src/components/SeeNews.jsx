@@ -7,19 +7,20 @@ const BtnContainer = styled.div`
 `;
 
 const SeeNewsBtn = styled.button`
-  color: white;
-  background-color: pink;
+  color: #adbdcd;
+  border: 2px solid #adbdcd;
+  background-color: white;
+  font-family: "Cafe24Decobox";
   font-size: 20px;
   font-weight: medium;
   border-radius: 50px;
   padding: 15px;
-  border: none;
 `;
 
 function SeeNews({ showNews }) {
   return (
     <BtnContainer>
-      <SeeNewsBtn onClick={showNews}>인기 뉴스 보기👀</SeeNewsBtn>
+      <SeeNewsBtn onClick={showNews}>Hot News 🔥</SeeNewsBtn>
     </BtnContainer>
   );
 }

@@ -22,7 +22,7 @@ function App() {
   };
   return (
     <>
-      <NewsHeader title="오늘의 TOP 확인하세요!" />
+      <NewsHeader title="Daily News" />
       <SeeNews showNews={showNews} />
       <NewsList news={news} />
     </>
