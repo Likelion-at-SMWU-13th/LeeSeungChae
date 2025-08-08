@@ -2,14 +2,17 @@ import React from "react";
 
 function NewsList({ news = [] }) {
   return (
-    <div>
+    <Card>
       {news.map((item, index) => (
         <div key={index}>
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
+          <Title>{item.title}</Title>
+          <Img src={item.urlToImage}></Img>
+          <Desc>{item.description}</Desc>
+          <Author>{item.author}</Author>
+          <Date>{item.publishedAt}</Date>
         </div>
       ))}
-    </div>
+    </Card>
   );
 }
 
