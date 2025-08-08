@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 30px;
 `;
 
 function NewsHeader({ title }) {
