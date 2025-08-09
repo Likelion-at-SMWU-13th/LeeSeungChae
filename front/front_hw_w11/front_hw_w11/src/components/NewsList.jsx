@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import defaultImg from "../assets/default_news_img.jpg";
 
 const CardContainer = Styled.div`
 display: flex;
@@ -19,7 +20,7 @@ flex-direction: column;
 justify-content: center;
 border-radius: 10px;
 width: 500px;
-height: 600px;
+height: 700px;
 margin: 30px;
 box-shadow: 3px 6px 16px rgba(0, 0, 0, 0.15);
 `;
@@ -55,7 +56,12 @@ function NewsList({ news = [] }) {
       {news.map((item, index) => (
         <Card key={index}>
           <Title>{item.title}</Title>
-          <Img src={item.urlToImage}></Img>
+          <Img
+            src={item.urlToImage || defaultImg}
+            onError={(e) => {
+              e.currentTarget.src = defaultImg;
+            }}
+          ></Img>
           <Desc>{item.description}</Desc>
           <Date>{item.publishedAt}</Date>
         </Card>

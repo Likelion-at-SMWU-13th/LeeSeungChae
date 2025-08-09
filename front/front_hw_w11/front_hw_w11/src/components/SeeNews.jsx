@@ -15,6 +15,7 @@ const SeeNewsBtn = styled.button`
   font-weight: medium;
   border-radius: 50px;
   padding: 15px;
+  cursor: pointer;
 `;
 
 function SeeNews({ showNews }) {
