@@ -20,7 +20,8 @@ export const Card = styled.div`
   width: 500px;
   height: 700px;
   margin: 30px;
-  box-shadow: 3px 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 12px 25px rgba(11, 10, 10, 0.15);
+  opacity: 0.95;
 `;
 
 export const Title = styled.h3`

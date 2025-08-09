@@ -15,10 +15,16 @@ export const SearchInput = styled.input`
   height: 55px;
   font-size: 20px;
   border-radius: 10px 0 0 10px;
+  padding-left: 10px;
 
   &:focus {
     outline: none;
   }
+
+  &::placeholder {
+    color: #b6bfddff;    
+    font-size: 17px; 
+    font-family: 'HakgyoansimGeurimilgiTTF-R';
 `;
 
 export const SearchBtn = styled.button`
