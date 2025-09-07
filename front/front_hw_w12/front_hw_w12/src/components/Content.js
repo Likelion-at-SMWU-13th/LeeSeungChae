@@ -1,14 +1,13 @@
-import React from "react";
 import styled from "styled-components";
 import Left from "./Left";
 import Right from "./Right";
 
-const Content = ({ part, setPart }) => {
+const Content = () => {
   return (
     <Wrapper>
       <div className="content">
-        <Left setPart={setPart} />
-        <Right part={part} />
+        <Left />
+        <Right />
       </div>
     </Wrapper>
   );
