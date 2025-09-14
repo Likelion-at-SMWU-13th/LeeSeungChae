@@ -7,11 +7,12 @@ const exerciseData = [
 ];
 
 const useExerciseStore = create((set) => ({
-  exercise: [...exerciseData],
+  allExercise: [...exerciseData],
+  myExercise: [],
 
   addExercise: (name) =>
     set((state) => ({
-      exercise: [...state.exercise, { id: Date.now(), name, sets: 1 }],
+      myExercise: [...state.exercise, { id: Date.now(), name, sets: 1 }],
     })),
 
   removeExercise: (id) =>
