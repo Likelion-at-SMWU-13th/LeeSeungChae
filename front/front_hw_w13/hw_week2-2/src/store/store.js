@@ -10,26 +10,26 @@ const useExerciseStore = create((set) => ({
   allExercise: [...exerciseData],
   myExercise: [],
 
-  addExercise: (name) =>
+  addExercise: (exercise) =>
     set((state) => ({
-      myExercise: [...state.exercise, { id: Date.now(), name, sets: 1 }],
+      myExercise: [...state.myExercise, { ...exercise, sets: 1 }],
     })),
 
   removeExercise: (id) =>
     set((state) => ({
-      exercise: state.exercise.filter((exercise) => exercise.id !== id),
+      myExercise: state.myExercise.filter((exercise) => exercise.id !== id),
     })),
 
   increaseSets: (id) =>
     set((state) => ({
-      exercise: state.exercise.map((exercise) =>
+      myExercise: state.myExercise.map((exercise) =>
         exercise.id === id ? { ...exercise, sets: exercise.sets + 1 } : exercise
       ),
     })),
 
   decreaseSets: (id) =>
     set((state) => ({
-      exercise: state.exercise.map((exercise) =>
+      myExercise: state.myExercise.map((exercise) =>
         exercise.id === id ? { ...exercise, sets: exercise.sets - 1 } : exercise
       ),
     })),
