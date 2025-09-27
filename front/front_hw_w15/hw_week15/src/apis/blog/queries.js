@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
-import { createUser, updateUser } from "@/apis/userApi";
+import { createUser, updateUser, readUser } from "@/apis/userApi";
 
 // 1. 회원가입 (POST)
 export const useCreateUser = () => {
@@ -23,5 +23,16 @@ export const useUpdateUser = () => {
       alert("정보 수정 완료!");
       queryClient.invalidateQueries({ queryKey: ["myPage"] });
     },
+  });
+};
+
+// 3. 마이페이지 조회 (GET)
+export const useReadUser = (userId) => {
+  return useQuery({
+    queryKey: ["myPage", userId],
+    queryFn: () => readUser(userId),
+    enabled: !!userId,
+    staleTime: 30 * 1000, // 30초 동안 신선한 상태 유지
+    retry: 3, // 최대 3번까지 재시도
   });
 };
