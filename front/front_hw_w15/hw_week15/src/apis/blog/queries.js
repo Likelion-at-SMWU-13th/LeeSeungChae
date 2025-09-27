@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
-import { createUser, updateUser, readUser } from "@/apis/userApi";
+import { createUser, updateUser, readUser, deleteUser } from "@/apis/userApi";
 
 // 1. 회원가입 (POST)
 export const useCreateUser = () => {
@@ -33,6 +33,22 @@ export const useReadUser = (userId) => {
     queryFn: () => readUser(userId),
     enabled: !!userId,
     staleTime: 30 * 1000, // 30초 동안 신선한 상태 유지
+    gcTime: 10 * 60 * 1000, // 캐시 10분 동안 보관
     retry: 3, // 최대 3번까지 재시도
+  });
+};
+
+// 4. 회원 정보 삭제 (DELETE)
+export const useDeleteUser = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (userId) => {
+      if (!userId) throw new Error("userId가 없습니다!");
+      return deleteUser(userId);
+    },
+    onSuccess: () => {
+      alert("회원 정보 성공적으로 삭제 완료!");
+      queryClient.invalidateQueries();
+    },
   });
 };
