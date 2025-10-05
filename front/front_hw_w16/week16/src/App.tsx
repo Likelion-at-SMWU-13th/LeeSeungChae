@@ -25,7 +25,8 @@ const mangBearItems: MangBearItem[] = [
     isFavorite: true,
     boughtAt: "용산 아이파크몰 영풍문고",
     boughtOn: 2024,
-    review: "",
+    review:
+      "용산 아이파크몰에서 친구를 기다리다가 너무 궁금했던 책이라 샀답니다!✨",
   },
   {
     itemName: "망그러진 만화 2",
@@ -141,4 +142,9 @@ function introduceOneItem(item: MangBearItem): void {
   console.log(`리뷰: ${item.review}`);
 }
 
-introduceOneItem(mangBearItems[0]);
+export default function App() {
+  const randomNum = Math.floor(Math.random() * mangBearItems.length);
+  const randomItem = mangBearItems[randomNum];
+  introduceOneItem(randomItem);
+  return <></>;
+}
