@@ -14,8 +14,10 @@ interface ItemDetail {
   review: string; // 리뷰
 }
 
+// Item, ItemDetail 정보를 모두 담은 망그러진곰 아이템 interface
 interface MangBearItem extends Item, ItemDetail {}
 
+// 가지고 있는 망그러진곰 아이템 배열 생성
 const mangBearItems: MangBearItem[] = [
   {
     itemName: "망그러진 만화 1",
@@ -143,8 +145,11 @@ function introduceOneItem(item: MangBearItem): void {
 }
 
 export default function App() {
+  // 랜덤으로 망그러진곰 아이템 중 하나 선택
   const randomNum = Math.floor(Math.random() * mangBearItems.length);
   const randomItem = mangBearItems[randomNum];
+
+  // 함수 호출하여 선택된 망그러진곰 아이템 콘솔에 출력
   introduceOneItem(randomItem);
   return <></>;
 }
