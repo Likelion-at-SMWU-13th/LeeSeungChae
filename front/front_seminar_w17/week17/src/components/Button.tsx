@@ -7,7 +7,7 @@ type ButtonContainerProps = {
 
 interface ButtonProps {
   txt?: string;
-  onBtnClick: () => void;
+  onBtnClick?: () => void;
   fontSize?: CSSProperties["fontSize"];
 }
 
